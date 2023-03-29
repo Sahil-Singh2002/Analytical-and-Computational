@@ -23,15 +23,6 @@ def babylonian_square_root_list(a,e,x):
 import pylab
 import math
 
-def babylonian_square_root_list(a,e,x):
-    # Your code here
-    x_list=[x]
-    assert a>0
-    assert e>0
-    while abs(((x_list[-1])**2)-a)>e:
-         x_list.append(0.5*((x_list[-1])+(a/(x_list[-1]))))
-    return x_list
-
 xy= babylonian_square_root_list(20000,1e-10,1)
 xv= pylab.linspace(0,len(xy),len(xy))
 vu=[math.sqrt(20000) for _ in range(len(xv))]
