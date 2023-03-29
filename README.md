@@ -7,4 +7,6 @@ This Coursework focuses on building the algorithm for The Babylonian (or Heron's
 * The function babylonian_square_root_list(a,e,x) where the parameters are the same as function above except in this function it outputs a list of the approximations [x_0,x_1,...,x_n].
 
 
-*  
+* The third part of the Coursework. I was assigned to build a plot to demenstrate the convergence of the Babylonian Method and how it converges to the actual square root of a given number for this case that they wanted us to look at was the square root of 2000. 
+
+In conclusion this code uses the help of while function, assert, lists and append also the library math and pylab to help demistrate this algorithm. 
