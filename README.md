@@ -1,12 +1,37 @@
 # Analytical-and-Computational
 
-These codes focuses on building the algorithm for The Babylonian (or Heron's) Method for computing the square root of a real positive number, using iterative sequence (x_n), where x_0 is an arbitrary starting value and x_i for i > 0 is defined iteratively by x_(n+1) = (x_n +a/x_n)/2. There will be a successive values computed for x_n until a desirable accuracy is achived. For that we just we set a maximum error to be x, we stop when n = N, where N is smallest positive integer such that absolute value of (x_N)^2 - a is less then e.
+# Babylonian Method for Square Root Approximation
 
-* The function babylonian_square_root(a,e,x) where the parameter a is our value for which we are trying to find the square root for, also we assert for a to be greater then 0. The parameter e is the tolerance value, also we assert for e to be greater then 0. The value of x is just the initual point at we start our convergence x_0. The function primerarly uses a while for loop to find the square root of a number.
+This repository contains code that implements the Babylonian (or Heron's) Method for computing the square root of a positive real number ${ x_{n+1} = \frac{1}{2} \left( x_n + \frac{a}{x_n} \right) }$. The method uses an iterative sequence $x_n$, where $x_0$ is an arbitrary starting value and $x_i$ for $i > 0$ is defined iteratively by ${ x_{n+1} = (x_n + a/x_n) / 2 }$. The algorithm continues calculating successive values of $x_n$ until a desired accuracy is achieved.
 
-* The function babylonian_square_root_list(a,e,x) where the parameters are the same as function above except in this function it outputs a list of the approximations [x_0,x_1,...,x_n].
+## Code Explanation
 
+The repository includes two functions and a plot:
 
-* The third part of the Coursework. I was assigned to build a plot to demenstrate the convergence of the Babylonian Method and how it converges to the actual square root of a given number for this case that they wanted us to look at was the square root of 2000. 
+### `babylonian_square_root(a, e, x)`
 
-In conclusion this code uses the help of while function, assert, lists and append also the library math and pylab to help demistrate this algorithm. 
+This function calculates the square root of a number using the Babylonian method. It takes three parameters: $a$ (the number for which we want to find the square root), $e$ (the desired tolerance), and $x$ (the initial point of convergence, $x_0$. The function includes assertions to ensure that $a > 0$ and $e > 0$. The function iteratively calculates $x_{n+1}$ until the desired accuracy is achieved and returns the approximation $x$ and the number of iterations $N$.
+
+### `babylonian_square_root_list(a, e, x)`
+
+This function is similar to the previous one but returns a list of all the approximations obtained during the iteration process, i.e., $[x_0, x_1, ..., x_n]$.
+
+### Plot
+
+The code also includes a plot to demonstrate the convergence of the Babylonian Method. It uses the `pylab` library to create a scatter plot of the approximations obtained from the `babylonian_square_root_list` function. The actual square root of $a$ is plotted as a red line for comparison.
+
+## Usage
+
+To use the code and generate the plot, follow these steps:
+
+1. Install the required dependencies by running `pip install matplotlib` in your terminal.
+
+2. Clone this repository to your local machine.
+
+3. Open the code file `babylonian_square_root.py` and modify the values of $a$, $e$, and $x$ according to your requirements.
+
+4. Run the code using a Python interpreter or an integrated development environment (IDE) of your choice.
+
+5. The plot will be displayed, showing the convergence of the Babylonian Method for the given input values.
+
+Feel free to explore and modify the code as needed!
